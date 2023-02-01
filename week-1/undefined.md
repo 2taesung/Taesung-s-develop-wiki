@@ -31,6 +31,14 @@
 
 &#x20;      [https://github.com/Schniz/fnm](https://github.com/Schniz/fnm)
 
+{% hint style="info" %}
+내 환경은 wsl이
+
+.fnm, .node 등의 글로벌 파일들은 시스템 자체인 /home 에 존재
+
+더불어 React는hot reloader 가 mnt/\~ 에서는 작동이 안되기 때문에 /home 이후인 곳에 폴더를 위치시킨다.
+{% endhint %}
+
 ### TypeScript + React + Jest + Parcel
 
 > mkdir \<my-app>
@@ -45,11 +53,34 @@
 
 > npm i -y //추가적인 옵션 질문들에 걍 다 yes 하겠다.
 
+package.json
+
+```
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+```
 
 
 
+2. .gitignore
 
+```
+/node_modules/ //폴더라는 의미가 담김
+or
+node_modules/ //현재 위치
+or
+node_modules //아몰랑 이 이름 다.
+```
 
-
-
+[https://www.toptal.com/developers/gitignore/](https://www.toptal.com/developers/gitignore/)
 
