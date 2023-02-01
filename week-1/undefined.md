@@ -10,7 +10,7 @@
 
 \=> 이 능력은 어떻게 키우는가?&#x20;
 
-\=> 강의를 들으며 찾아보고 못찾으면 구체적으로 질문.
+<mark style="background-color:orange;">=> 강의를 들으며 찾아보고 못찾으면 구체적으로 질문.</mark>
 
 \=> 내 생각으로개발할때 개발환경을 항상 생각하면서 개발하는 습관을 갖는것?
 
@@ -70,7 +70,9 @@ package.json
 }
 ```
 
+<mark style="background-color:orange;">npm 버전에대한 이야기는 없네 => 강의 듣고 내용 없으면 질문</mark>
 
+![](../.gitbook/assets/image.png)
 
 2. .gitignore
 
@@ -83,4 +85,18 @@ node_modules //아몰랑 이 이름 다.
 ```
 
 [https://www.toptal.com/developers/gitignore/](https://www.toptal.com/developers/gitignore/)
+
+
+
+3. typescript
+
+> npm i -D typescript
+
+
+
+
+
+
+
+
 
