@@ -174,8 +174,18 @@ Created a new tsconfig.json with:
   esModuleInterop: true
   skipLibCheck: true
   forceConsistentCasingInFileNames: true
+
+You can learn more at https://aka.ms/tsconfig
 ```
 
 다음 설정을 가진&#x20;
 
-tsconfig.json
+tsconfig.json 생성
+
+기존에 파악하고 있던 속성 외로 추가 되는 정보
+
+> jsx: 'preserve'
+
+아래는 jsx 속성관련 공식문서 정보&#x20;
+
+[https://www.typescriptlang.org/tsconfig#jsx](https://www.typescriptlang.org/tsconfig#jsx)
