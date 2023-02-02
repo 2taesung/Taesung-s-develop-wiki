@@ -106,7 +106,7 @@ node_modules //아몰랑 이 이름 다.
 
 <mark style="background-color:orange;">npm의 버전에대한 이야기는 없네 => 강의 듣고 내용 없으면 질문</mark>
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (1).png>)
 
 ```
 {
@@ -398,7 +398,7 @@ package.json&#x20;
 
 
 
-7. html, js 셋팅
+7. html, js 기본환경셋팅
 
 > touch index.html
 
@@ -423,7 +423,65 @@ index.html
 
 
 
+8. 내친김에 React 기본 셋팅까
+
+여기서 중요한게 간단한 개발 기본 습관? 을 엿볼수 있었는데
+
+1\) 적절한 환경셋팅으로 개발 환경 및 에러 신뢰도 있게 관리(ts, eslint 등)
+
+2\) 에러 발생하면 들어가(ctrl+click) 코드를 까본다.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+```typescript
+export function createRoot(container: Element | DocumentFragment, options?: RootOptions): Root;
+```
+
+3\) 원인을 발견한다.&#x20;
+
+* ts에서 ReactDOM.createRoot()함수에는  container라는 인자가 있어야하고  option은 선택적
+* 이 인자는 container 인자의 type까지 들어가서 체크 element or DocumentFragment
+
+4\) 코드에 적용함 에러 사라짐(반복)
+
+아무튼 위의 과정을 거치면 됨 아래는 리액트 최초 적용
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+element null인 경우를 방어.
+
+```tsx
+import ReactDOM from "react-dom/client";
+
+const element = document.getElementById('root');
+
+if (element) {
+  const root = ReactDOM.createRoot(element);
+
+  root.render(<p>Hi</p>);
+}
+```
 
 
 
+```tsx
+import ReactDOM from "react-dom/client";
 
+function App() {
+  return (
+    <p>Hello, world!</p>
+  )
+}
+
+const element = document.getElementById('root');
+
+if (element) {
+  const root = ReactDOM.createRoot(element);
+
+  root.render(<App/>);
+}
+```
+
+
+
+5\)  끝.
