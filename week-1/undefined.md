@@ -240,7 +240,90 @@ Would you like to install them now?
 
 여러가지 추가적인 설정 및 설치를 했기에 그거를 호환해준다는 말
 
+.eslintrc.js
 
+```
+module.exports = {
+	env: {
+		browser: true,
+		es2021: true,
+	},
+	extends: [
+		'plugin:react/recommended',
+		'xo',
+	],
+	overrides: [
+		{
+			extends: [
+				'xo-typescript',
+			],
+			files: [
+				'*.ts',
+				'*.tsx',
+			],
+		},
+	],
+	parserOptions: {
+		ecmaVersion: 'latest',
+		sourceType: 'module',
+	},
+	plugins: [
+		'react',
+	],
+	rules: {
+	},
+};
+```
+
+\=> 원래는 몇가지 rule들을 추가하기도 함.
+
+아직 설치   전에도 jest 추가 가
+
+```
+env: {
+	browser: true,
+	es2021: true,
+	jest: true,
+},
+```
+
+잊지말고&#x20;
+
+> touch .eslintignore
+
+eslint 실행할때 여기는 뺄거야
+
+```
+/node_modules/
+/dist/
+/.parcel-cache/
+```
+
+기본적으로 이렇게 삼종세트(gitignore랑 똑같이 해도 됨)
+
+
+
+4. react, react-dom
+
+> npm i react react-dom
+
+> npm i -D @types/react @types/react-dom
+
+{% hint style="info" %}
+최근에는 이렇게 @types를 안해도 내장을 하곤 함.
+
+그러나 옛날것들은 이렇게 같이 설치해줘야함.
+{% endhint %}
+
+
+
+5. 테스트 도구 설치
+
+> npm i -D jest @types/jest @swc/core @swc/jest\
+> jest-environment-jsdom\
+> @testing-library/react @testing-library/jest-dom
+
+기본적인 jest가 아니라 swc <mark style="background-color:orange;">=> 잘모르는   내용. 관련해서는 공부해보자</mark>
 
 
 
