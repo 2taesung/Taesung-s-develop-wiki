@@ -106,7 +106,7 @@ node_modules //아몰랑 이 이름 다.
 
 <mark style="background-color:orange;">npm의 버전에대한 이야기는 없네 => 강의 듣고 내용 없으면 질문</mark>
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (2).png>)
 
 ```
 {
@@ -250,6 +250,7 @@ module.exports = {
 	},
 	extends: [
 		'plugin:react/recommended',
+		'plugin:react/jsx-runtime', //reat 일일히 import 안해도 lint 안때림
 		'xo',
 	],
 	overrides: [
@@ -431,7 +432,7 @@ index.html
 
 2\) 에러 발생하면 들어가(ctrl+click) 코드를 까본다.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ```typescript
 export function createRoot(container: Element | DocumentFragment, options?: RootOptions): Root;
@@ -446,7 +447,7 @@ export function createRoot(container: Element | DocumentFragment, options?: Root
 
 아무튼 위의 과정을 거치면 됨 아래는 리액트 최초 적용
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 element null인 경우를 방어.
 
