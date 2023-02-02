@@ -242,7 +242,7 @@ Would you like to install them now?
 
 .eslintrc.js
 
-```
+```javascript
 module.exports = {
 	env: {
 		browser: true,
@@ -279,7 +279,7 @@ module.exports = {
 
 아직 설치   전에도 jest 추가 가
 
-```
+```javascript
 env: {
 	browser: true,
 	es2021: true,
@@ -324,6 +324,110 @@ eslint 실행할때 여기는 뺄거야
 > @testing-library/react @testing-library/jest-dom
 
 기본적인 jest가 아니라 swc <mark style="background-color:orange;">=> 잘모르는   내용. 관련해서는 공부해보자</mark>
+
+이 또한 내용이 계속 바뀔 수 있다. 당황하지 말고 맥락을 이해하고 있어서 문서를 봐서 맞게 변경해줘야함
+
+예를들어, 맥락 "Jest와 swc를 이용" <mark style="background-color:orange;">=> 좀더 구체적으로 이 맥락이라는 거에 대한 탐구를</mark>
+
+
+
+jest가 기본적으로 swc, ts를 잡아주지 않고 있다.
+
+그래서 jest config를 통해서 이러한 설정들을 적용해줘야함.
+
+> touch jest.config.js
+
+```javascript
+module.exports = {
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: [
+    '@testing-library/jest-dom/extend-expect', //는 사실 설치를 위에서 하긴 함
+    './jest.setup', //이건 안쓴다 지워
+  ],
+  transform: {
+    '^.+\\.(t|j)sx?$': ['@swc/jest', {
+      jsc: {
+        parser: {
+          syntax: 'typescript',
+          jsx: true,
+          decorators: true,
+        },
+        transform: {
+          react: {
+            runtime: 'automatic',
+          },
+        },
+      },
+    }],
+  },
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+  ],
+};
+```
+
+[https://github.com/ahastudio/CodingLife/blob/main/20220726/react/jest.config.js](https://github.com/ahastudio/CodingLife/blob/main/20220726/react/jest.config.js)
+
+
+
+6. Parcel 설치
+
+> npm i -D parcel
+
+package.json&#x20;
+
+```json
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "source": "./index.html", //원래는 "main": "index.js"로 되어있다.
+  "scripts": {
+    "start": "parcel --port 8080",
+    "build": "parcel build", //dist 파일 생성
+    "check": "tsc --noEmit", // tsc 컴파일을 진행하지 않고 체크만
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .", // 형식들 적용
+    "test": "jest",
+    "coverage": "jest --coverage --coverage-reporters html",
+    "watch:test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@swc/core": "^1.2.218",
+    "@swc/jest": "^0.2.22",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@types/jest": "^28.1.6",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
+    "parcel": "^2.8.0",
+    "process": "^0.11.10",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.7.0",
+    "usestore-ts": "^0.0.3"
+  }
+}
+```
+
+
 
 
 
