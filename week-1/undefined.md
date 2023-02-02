@@ -186,7 +186,7 @@ You can learn more at https://aka.ms/tsconfig
 
 tsconfig.json 생성
 
-기존에 파악하고 있던 속성 외로 추가 되는 정보
+기존에 파악하고 있던 tsconfig 속성 외로 추가 되는 정보
 
 > jsx: 'preserve'
 >
@@ -197,3 +197,54 @@ tsconfig.json 생성
 아래는 jsx 속성관련 공식문서 정보&#x20;
 
 [https://www.typescriptlang.org/tsconfig#jsx](https://www.typescriptlang.org/tsconfig#jsx)
+
+
+
+3. ESLint
+
+> npm i -D eslint
+
+linting 정적 분석기
+
+패키지 설치 했으니 npx 할수 있음(복습)
+
+> npx eslint --init
+
+관련 설정들을 해주어야한다.
+
+```
+What type of modules does your project use?
+>JavaScript modules (import/export)
+```
+
+\=> 어차피 Parcel로 번들링 해서 쓸거라서 모듈을 직접  활용하는 require/exports 가 아니여도 괜찮다.
+
+{% hint style="info" %}
+Vite 를 쓰면 또 es module?? 을 적극적으로 쓰기도 한다.
+{% endhint %}
+
+```
+Which style guide do you want to follow?
+>xo-typescript(아샬의픽)
+```
+
+{% hint style="info" %}
+airbnb가 최근 빠짐 ..
+{% endhint %}
+
+```
+eslint-plugin-react@latest eslint-config-xo@ .......
+Would you like to install them now?
+>Yes
+```
+
+여러가지 추가적인 설정 및 설치를 했기에 그거를 호환해준다는 말
+
+
+
+
+
+
+
+
+
