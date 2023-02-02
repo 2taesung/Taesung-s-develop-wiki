@@ -5,7 +5,7 @@
 
 정리하고 있는 지금도 버전이 달라지고 있음.
 
-그러므로 앞으로 전체적인변흐름을경파악하고 변경 대응할 수 있는 능력을 키우는게 중요
+그러므로 앞으로 전체적인변흐름을 파악하고 변경에 대응할 수 있는 능력을 키우는게 중요
 {% endhint %}
 
 \=> 이 능력은 어떻게 키우는가?&#x20;
@@ -32,7 +32,7 @@
 &#x20;      [https://github.com/Schniz/fnm](https://github.com/Schniz/fnm)
 
 {% hint style="info" %}
-내 환경은 wsl이
+내 환경은 wsl
 
 .fnm, .node 등의 글로벌 파일들은 시스템 자체인 /home 에 존재
 
@@ -51,7 +51,9 @@
 
 옵션들이 많이 나오는데 한번 쭉 읽어보아라.
 
-> npm i -y //추가적인 옵션 질문들에 걍 다 yes 하겠다.
+{% hint style="info" %}
+npm i -y //추가적인 옵션 질문들에 걍 다 yes 하겠다.
+{% endhint %}
 
 package.json
 
@@ -76,7 +78,9 @@ package.json
 
 하면 "echo \\"Error: no test specified\\" && exit 1" 이 쉘 스크립트가 실행된다. 딴거 쓰면 딴거 나옴.
 
-실행 예약어들을 넣는다. 앞으로 cra를 쓰면 자동으로 생기는 dev, start 등등의 역할들.
+실행 예약어들을 넣는다. 앞으로 cra를 쓰면 자동으로 생기는 dev, start 등등의 역할들.\
+\
+<mark style="background-color:orange;">=> 다른 기존 환경을 보니 script 폴더가 따로 있음. 강의 진행 후 파악</mark>
 
 2. .gitignore
 
@@ -185,6 +189,10 @@ tsconfig.json 생성
 기존에 파악하고 있던 속성 외로 추가 되는 정보
 
 > jsx: 'preserve'
+>
+> or jsx: 'react'
+>
+> or jsx: 'react-jsx' (아샬의 픽)
 
 아래는 jsx 속성관련 공식문서 정보&#x20;
 
