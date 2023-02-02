@@ -96,6 +96,10 @@ node_modules //아몰랑 이 이름 다.
 
 > npm i -D typescript
 
+{% hint style="info" %}
+명령어 축약 : npm install --save -dev (= npm i -D)
+{% endhint %}
+
 <mark style="background-color:orange;">npm의 버전에대한 이야기는 없네 => 강의 듣고 내용 없으면 질문</mark>
 
 ![](../.gitbook/assets/image.png)
@@ -133,7 +137,7 @@ node_modules //아몰랑 이 이름 다.
 
 아무튼 이 설치로 로컬 환경의 node\_modules에 typescript 패키지가 설치되고 함께 .bin에 관련 파일들도 생성이 된다. 예를 들면, 아래의 tsc 그래서 아래의 tsc는 npx를 통해 작업이 가능한 것.
 
-
+<mark style="background-color:orange;">=> .bin이 정확히 무엇인가</mark>
 
 > npx tsc --init
 
@@ -160,3 +164,18 @@ npx를 사용하면 node\_modules에 패키지를 실제 설치하는게 아니�
 또한, 그래서 옛날에는 npm으로 글로벌로 tsc를 설치하곤 했는데 지금은 npx를 하면 해당 폴더 안의 node\_modules>.bin>tsc를 실행하기 때문에 굉장히 성능이 좋고 빠르다.
 
 <mark style="background-color:orange;">=> 구체적으로 이 '캐시' 라는 거의 작동 원리나 해당 내용 지식을 알아보자</mark>
+
+```
+Created a new tsconfig.json with:
+                                                                                                                    TS
+  target: es2016
+  module: commonjs
+  strict: true
+  esModuleInterop: true
+  skipLibCheck: true
+  forceConsistentCasingInFileNames: true
+```
+
+다음 설정을 가진&#x20;
+
+tsconfig.json
