@@ -392,42 +392,34 @@ package.json&#x20;
     "coverage": "jest --coverage --coverage-reporters html",
     "watch:test": "jest --watchAll"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@swc/core": "^1.2.218",
-    "@swc/jest": "^0.2.22",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@types/jest": "^28.1.6",
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.31.0",
-    "@typescript-eslint/parser": "^5.31.0",
-    "eslint": "^8.20.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "jest": "^28.1.3",
-    "jest-environment-jsdom": "^28.1.3",
-    "parcel": "^2.8.0",
-    "process": "^0.11.10",
-    "typescript": "^4.7.4"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "reflect-metadata": "^0.1.13",
-    "tsyringe": "^4.7.0",
-    "usestore-ts": "^0.0.3"
-  }
+  ...
 }
 ```
 
 
+
+7. html, js 셋팅
+
+> touch index.html
+
+index.html
+
+````
+```html
+<body>
+  <p>Hello, world!</p>
+  <script type="module" src="./src/main.tsx"></script>
+</body>
+```
+````
+
+{% hint style="info" %}
+원래는 esmodule이 변환을 해주는데 parcel이 번들링을 해준다.
+{% endhint %}
+
+> mkdir src
+>
+> touch src/main.tsx
 
 
 
