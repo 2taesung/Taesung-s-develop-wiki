@@ -74,13 +74,14 @@ ReactNode에는 얘네들이 들어갈 수 있다~~\~~~\~라고 이미 React에 
 {% hint style="info" %}
 TypeScript와 별개로도 함수의 인자를 넣을 때, 좋은 예시는&#x20;
 
-```
+```tsx
 function add(x: number, y: number = 0) { return x + y; }
 >
 function add(x: number, y?: number) { return x + (y || 0) }
 >
-let targetName: string | undefined;
-function add(x: number, y?: targetName) { return x + y }
+type target = number | undefined;
+function add(x: number, y?: target) { return x+(y || 0) }
+//(굳이 타입을 사용한다면...)
 ```
 {% endhint %}
 
