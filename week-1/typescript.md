@@ -46,3 +46,45 @@ function fetchProducts({ category }: { category: Category }) {
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 \=> 함수를 사용할 때, 굉장히 직관적으로 변하고 효율적으로 되고 먼 훗날에 함수를 보더라도 더 이해하기 쉬워질듯 함.(이건 아직 내 추측)
+
+\=> 아샬님 "컴파일할때 에러 잡고 보다도 이게 더 크다 "
+
+
+
+### React에서 type 시스템으로  쓰게끔 만들어놈
+
+예를 들어, ReactNode가 대표적
+
+[React type code](https://github.com/facebook/react/blob/main/packages/shared/ReactTypes.js)
+
+```typescript
+export type ReactNode =
+  | React$Element<any>
+  | ReactPortal
+  | ReactText
+  | ReactFragment
+  | ReactProvider<any>
+  | ReactConsumer<any>;
+```
+
+ReactNode에는 얘네들이 들어갈 수 있다~~\~~~\~라고 이미 React에 있음 ;
+
+
+
+{% hint style="info" %}
+TypeScript와 별개로도 함수의 인자를 넣을 때, 좋은 예시는&#x20;
+
+```
+function add(x: number, y: number = 0) { return x + y; }
+>
+function add(x: number, y?: number) { return x + (y || 0) }
+>
+let targetName: string | undefined;
+function add(x: number, y?: targetName) { return x + y }
+```
+{% endhint %}
+
+
+
+
+
