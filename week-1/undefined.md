@@ -434,7 +434,7 @@ index.html
 
 2\) 에러 발생하면 들어가(ctrl+click) 코드를 까본다.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ```typescript
 export function createRoot(container: Element | DocumentFragment, options?: RootOptions): Root;
