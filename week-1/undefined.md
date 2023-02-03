@@ -147,7 +147,17 @@ node_modules //아몰랑 이 이름 다.
 
 tsc는 ts 컴파일러다.
 
-npx가 하는 일은 별도 패키지 설치 없이&#x20;
+npx를 사용하면 node\_modules에 패키지를 실제 설치하는게 아니라 어떤 캐시에 저장을 해 활용을 하게 됨
+
+또한, 그래서 옛날에는 npm으로 글로벌로 tsc를 설치하곤 했는데 지금은 npx를 하면 해당 폴더 안의 node\_modules>.bin>tsc를 실행하기 때문에 굉장히 성능이 좋고 빠르다.
+
+<mark style="background-color:orange;">=> 구체적으로 이 '캐시' 라는 거의 작동 원리나 해당 내용 지식을 알아보자</mark>
+
+
+
+또한, 두번째에 있는 명령어로 .bin에 있는 tsc를 직접 실행시킬 수 있다.
+
+node\_modules/.bin
 
 ```
 - node_modules
@@ -155,19 +165,11 @@ npx가 하는 일은 별도 패키지 설치 없이&#x20;
    ㄴtsc
 ```
 
-node\_modules에 있는 .bin 에 있는 tsc를 실행시킴.
-
-실제로 npx 없이
-
 > ./node\_modules/.bin/tsc&#x20;
 
-로 실행시킬 수 있다.
-
-npx를 사용하면 node\_modules에 패키지를 실제 설치하는게 아니라 어떤 캐시에 저장을 해 활용을 하게 됨
-
-또한, 그래서 옛날에는 npm으로 글로벌로 tsc를 설치하곤 했는데 지금은 npx를 하면 해당 폴더 안의 node\_modules>.bin>tsc를 실행하기 때문에 굉장히 성능이 좋고 빠르다.
-
-<mark style="background-color:orange;">=> 구체적으로 이 '캐시' 라는 거의 작동 원리나 해당 내용 지식을 알아보자</mark>
+{% hint style="info" %}
+[bin파일의정체](https://simsimjae.medium.com/%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%95%88%EC%97%90%EB%8A%94-bin%EC%9D%B4%EB%9D%BC%EA%B3%A0%ED%95%98%EB%8A%94-%EC%88%A8%EA%B9%80-%ED%8F%B4%EB%8D%94%EA%B0%80-%EC%A1%B4%EC%9E%AC%ED%95%9C%EB%8B%A4-%EC%9D%B4-%ED%8F%B4%EB%8D%94%EB%8A%94-%EB%AD%90%EB%95%8C%EB%A7%A4-%EC%9E%88%EB%8A%94%EA%B1%B4%EC%A7%80-%EA%B6%81%EA%B8%88%ED%95%B4%EC%84%9C-%EC%B0%BE%EC%95%84%EB%B3%B4%EC%95%98%EB%8B%A4-8257ddaa1a7e)
+{% endhint %}
 
 ```
 Created a new tsconfig.json with:
