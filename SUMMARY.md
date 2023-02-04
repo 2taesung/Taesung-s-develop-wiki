@@ -7,3 +7,4 @@
   * [React](week-1/react.md)
   * [Testing Library](week-1/testing-library.md)
   * [Parcel](week-1/parcel.md)
+  * [ESLint](week-1/eslint.md)
