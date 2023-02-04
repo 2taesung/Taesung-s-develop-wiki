@@ -6,3 +6,4 @@
   * [TypeScript](week-1/typescript.md)
   * [React](week-1/react.md)
   * [Testing Library](week-1/testing-library.md)
+  * [Parcel](week-1/parcel.md)
