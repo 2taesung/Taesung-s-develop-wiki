@@ -14,6 +14,8 @@
 
 \=> 내 생각으로개발할때 개발환경을 항상 생각하면서 개발하는 습관을 갖는것?
 
+[따라만 하면 환경 세팅 완료](https://github.com/2taesung/frontend-survival-week01/blob/2taesung/README.md)
+
 
 
 ### JavaScript(Node.js) 개발 환경 세팅(global)
@@ -200,7 +202,16 @@ tsconfig.json 생성
 
 [https://www.typescriptlang.org/tsconfig#jsx](https://www.typescriptlang.org/tsconfig#jsx)
 
+\+ 추가
 
+```javascript
+  parserOptions: {
+     // ...(전략)...
+     tsconfigRootDir: __dirname,  	
+  }
+```
+
+이 옵션을 추가해줘야 tsconfig의 RootDirectory가 바로 현재 실행하는 절대경로로 세팅됨
 
 3. ESLint
 
