@@ -8,3 +8,5 @@
   * [Testing Library](week-1/testing-library.md)
   * [Parcel](week-1/parcel.md)
   * [ESLint](week-1/eslint.md)
+* [Week 2](week-2/README.md)
+  * [JSX](week-2/jsx.md)
