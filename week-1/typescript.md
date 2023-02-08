@@ -32,7 +32,7 @@ pair = ['hp', 256];
 
 예를들어, 'food', 'toy', 'bag' 으로 매개변수를 특정해 제한하고 추론을 유도할 수 있
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 이걸 제한하는 기능만 생각할수도 있는데
 

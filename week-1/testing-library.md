@@ -2,6 +2,8 @@
 
 Jest에는 RSpec의 let 지원 x
 
+## Jest
+
 ### 기본적인 테스트 코드
 
 ```javascript
@@ -38,7 +40,7 @@ package.json
 
 ### BDD 스타일의 테스트 코드
 
-BDD??
+<mark style="background-color:orange;">BDD가 무엇??</mark>
 
 ```javascript
 describe('add', () => {
@@ -105,17 +107,47 @@ Module ./jest.setup in the setupFilesAfterEnv option was not found. is: /home/ts
 Configuration Documentation: https://jestjs.io/docs/configuration
 {% endhint %}
 
+
+
+## React Testing Library
+
+E2E 테스트를 할 수 있음
+
+package.json
+
+```json
+"devDependencies": {
+  "@swc/core": "^1.3.32",
+  "@swc/jest": "^0.2.24",
+  "@testing-library/jest-dom": "^5.16.5",
+  "@testing-library/react":
+  ...
+}
 ```
-tsl@pc:~/mt/my-app$ npm test
 
-> my-app@1.0.0 test
-> jest
+### 기본적인 테스트 코드
 
-● Validation Error:
+```javascript
+test('Greeting', () => {
+  render(<Greeting name="world" />);
 
-  Module ./jest.setup in the setupFilesAfterEnv option was not found.
-         <rootDir> is: /home/tsl/mt/my-app
+  screen.getByText('Hello, world!');
 
-  Configuration Documentation:
-  https://jestjs.io/docs/configuration
+  screen.getByText(/Hello/);
+
+  expect(screen.queryByText(/Hi/)).not.toBeInTheDocument();
+});
+
 ```
+
+단, “F/E 테스트 = only React 컴포넌트 테스트”가 되는 상황은 최대한 피하는 게 좋다. 본질에 집중하지 못하고 너무 많은 테스트 코드를 작성할 위험이 있다. 유지보수를 돕기 위해 테스트 코드를 작성하는데, 테스트 코드를 잘못 작성하면 오히려 유지보수를 저해할 수 있다.
+
+
+
+\=> 이게 내가 TDD를 오해하고 있던 부분.&#x20;
+
+\=> 막말로 클릭한번으로 해당 이벤트와 E2E 테스트를 끝낼수 있는데(개발자 관점에서) 왜 테스트를 위해 테스트를 배워서 테스트 코드를 구현 코드와 따블로 작성해야하느냐
+
+\=> TDD의 포인트는 단순히 '컴포넌트 테스트'만 하는게 아니라 '상태', '현상', '로직' 등을 따질 수 있는 테스트 코드들이 효과적일 수 있다. 특히 UI만 테스트 하는 경우는 유지보수시에 UI를 조금만 변경해도 테스트 코드가 다 망가질 수 있기에 오히려유지보수에 저해를 시킨다.
+
+<mark style="background-color:orange;">=> 이 말의 포인트를 이해하고 파악은 됐는데 구체적으로 테스트 코드 작성은 연습이 필요해보임</mark>
