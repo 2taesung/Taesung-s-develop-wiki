@@ -10,4 +10,4 @@
   * [ESLint](week-1/eslint.md)
 * [Week 2](week-2/README.md)
   * [JSX](week-2/jsx/README.md)
-    * [JSX -> JS 테스트 코드들](week-2/jsx/jsx-greater-than-js.md)
+    * [JSX -> JS 변환 실습 코드들](week-2/jsx/jsx-greater-than-js.md)
