@@ -45,7 +45,7 @@ function fetchProducts({ category }: { category: Category }) {
 }
 ```
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 \=> 함수를 사용할 때, 굉장히 직관적으로 변하고 효율적으로 되고 먼 훗날에 함수를 보더라도 더 이해하기 쉬워질듯 함.(이건 아직 내 추측)
 

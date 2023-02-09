@@ -9,4 +9,5 @@
   * [Parcel](week-1/parcel.md)
   * [ESLint](week-1/eslint.md)
 * [Week 2](week-2/README.md)
-  * [JSX](week-2/jsx.md)
+  * [JSX](week-2/jsx/README.md)
+    * [JSX -> JS 테스트 코드들](week-2/jsx/jsx-greater-than-js.md)

@@ -49,7 +49,7 @@ describe('add', () => {
   });
 ```
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 \=> 설명이 표시되는걸 볼 수 있음
 
