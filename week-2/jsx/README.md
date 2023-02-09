@@ -139,6 +139,41 @@ React.createElement(
 
 
 
+### VDOM을 쓰는 이유?
+
+미신 : VDOM을 쓰는 건 빠르기 때문?
+
+🤪  [현실](https://twitter.com/dan\_abramov/status/842329893044146176)&#x20;
+
+→ fast enough  (빠르긴 함)
+
+→ maintainable (유지보수)
+
+&#x20; 선언형 UI라는 좋은 구조를 줌
+
+&#x20; jquery 보다 뭐가 특별하게 다르고 그런게 아님.
+
+Dan Abramov
+
+* [Redux](https://redux.js.org/) 창시자
+* [React Core 개발자](https://beta.reactjs.org/learn/meet-the-team)
+
+
+
+### 그래서 VDOM은 무엇인가요?
+
+{% embed url="https://ko.reactjs.org/docs/faq-internals.html" %}
+
+그래서 VDOM !== DOM &#x20;
+
+예를 들어, VDOM에 있는 \<Fragment> 같은건 DOM에 없음
+
+
+
+
+
+
+
 {% hint style="info" %}
 ### React Developer Tools
 
