@@ -131,11 +131,46 @@ React.createElement(
 
 
 
-반면에 가상 DOM 트리를 이용하면  React.createElement가새심플하게  계속 처음부터 끝까지 최신  정보에따라 렌더링해주고 이것을 이전 것과 1대1로 비교하면서 차이점을 단순 비교하면 복잡한 로직도 없고 단순 비교를 하면 됨으로 훨씬 효율적이고 직관적이고 심플해진다.
+반면에 가상 DOM 트리를 이용하면  React.createElement가새심플하게  계속 처음부터 끝까지 최신  정보에따라 렌더링해주고 이것을 이전 것과 1대1로 비교하면서 차이점을 단순 비교하면 복잡한 로직도 없고 단순 비교를 하면 됨(이걸  <mark style="color:red;">"재조정(Reconciliation)"</mark>이라고  부름)으로 훨씬 효율적이고 직관적이고 심플해진다.
 
 
 
 <mark style="background-color:orange;">=> 근데 사실 이건 추측... 한번 조사를 통해 확신을 가질 수 있도록 하자</mark>&#x20;
+
+
+
+### VDOM을 쓰는 이유?
+
+미신 : VDOM을 쓰는 건 빠르기 때문?
+
+🤪  [현실](https://twitter.com/dan\_abramov/status/842329893044146176)&#x20;
+
+→ fast enough  (빠르긴 함)
+
+→ maintainable (유지보수)
+
+&#x20; 선언형 UI라는 좋은 구조를 줌
+
+&#x20; jquery 보다 뭐가 특별하게 다르고 그런게 아님.
+
+Dan Abramov
+
+* [Redux](https://redux.js.org/) 창시자
+* [React Core 개발자](https://beta.reactjs.org/learn/meet-the-team)
+
+
+
+### 그래서 VDOM은 무엇인가요?
+
+{% embed url="https://ko.reactjs.org/docs/faq-internals.html" %}
+
+그래서 VDOM !== DOM &#x20;
+
+예를 들어, VDOM에 있는 \<Fragment> 같은건 DOM에 없음
+
+
+
+
 
 
 
