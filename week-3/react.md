@@ -55,7 +55,7 @@ Build <mark style="background-color:purple;">encapsulated components</mark> that
     * 컴포넌트가 너무 커지고 있다면…
 
     \=> 객체지향 프로그래밍과도 관련이 있는 키워드이다.
-* CSS → 이미 알고 있는 기준을 재활용.
+* <mark style="background-color:orange;">CSS → 이미 알고 있는 기준을 재활용.</mark>
 * Design’s Layer
 * Information Architecture (JSON Schema의 영향) → 실제로 엄청 많이 쓰게 됨. 자연스러운 SRP를 위해서 사실상 강제됨.
 
