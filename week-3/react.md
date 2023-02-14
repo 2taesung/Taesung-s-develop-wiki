@@ -48,3 +48,29 @@ Build <mark style="background-color:purple;">encapsulated components</mark> that
 
 그렇다면 '간단한 컴포넌트'의 '간단한'의 기준이 뭐냐.
 
+
+
+*   [SRP (Single Responsibility Principle)](https://ko.wikipedia.org/wiki/%EB%8B%A8%EC%9D%BC\_%EC%B1%85%EC%9E%84\_%EC%9B%90%EC%B9%99)
+
+    * 컴포넌트가 너무 커지고 있다면…
+
+    \=> 객체지향 프로그래밍과도 관련이 있는 키워드이다.
+* CSS → 이미 알고 있는 기준을 재활용.
+* Design’s Layer
+* Information Architecture (JSON Schema의 영향) → 실제로 엄청 많이 쓰게 됨. 자연스러운 SRP를 위해서 사실상 강제됨.
+
+&#x20;     \=> json 레이어에 따라 컴포넌트를 분리한다 등. 아샬님이 가장 선호하는 방법.
+
+
+
+작은 컴포넌트=부품을 만들어서 조립. 조합은 가지수를 폭발적으로 늘릴 수 있는 가장 전형적인 방법.
+
+[Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)은 우리가 잘 알고 있는 계층형 구조를 몇 가지 카테고리로 묶은 방법.
+
+\=> Atomic Design은 개념적인 거임.
+
+\=> 창시자도 이대로 쓰라고 하지 않음.&#x20;
+
+\=> atom 원자라는게 우리가 주기율표를 보면 주기율표에 있는 모든걸로 세상이 만들어져있음
+
+\=> 그러니 우리도 이러한 원자(간단한 컴포넌트)를 통해 세상(UI)을 효율적으로 만들라는것.
