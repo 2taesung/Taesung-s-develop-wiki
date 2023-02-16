@@ -15,5 +15,5 @@
   * [구조화 및 암기](week-3/undefined.md)
   * [data](week-3/page-1.md)
   * [React](week-3/react.md)
-  * [SRP 수단](week-3/srp.md)
+  * [컴포넌트,함수 분리(분해)](week-3/undefined-1.md)
   * [State](week-3/state.md)
