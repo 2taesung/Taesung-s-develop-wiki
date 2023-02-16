@@ -51,11 +51,12 @@ useState로 대표되는 state 역시 React로 개발을 하는데 SRP와 양대
 
 ### DRY 원칙을 따르는 SSOT를 만든다.
 
+* [DRY (Don’t Repeat Yourself)](https://ko.wikipedia.org/wiki/%EC%A4%91%EB%B3%B5%EB%B0%B0%EC%A0%9C)
+* [SSOT (Single Source of Truth)](https://ko.wikipedia.org/wiki/%EB%8B%A8%EC%9D%BC\_%EC%A7%84%EC%8B%A4\_%EA%B3%B5%EA%B8%89%EC%9B%90)
+
 <mark style="background-color:green;">위의 사례와도 연관이 되고 state를 기반으로 또 다른 state를 만드는 것 역시 지양해야함.</mark>
 
-<mark style="background-color:green;">=> 이건 정확히 생각을 해보자 로직에 따라서는 빈번하게 state를 의존적으로 만들기는 하는것 같은데</mark>&#x20;
-
-<mark style="background-color:green;">=> 또 이렇게 생각하면 불필요한 렌더링이 두배로 드는셈이니까</mark>&#x20;
+<mark style="background-color:green;">=> 이건 정확히 생각을 해보자 로직에 따라서는 빈번하게 state를 의존적으로 만들기는 하는것 같은데 또 이렇게 생각하면 불필요한 렌더링이 두배로 드는셈이니까</mark>&#x20;
 
 <mark style="background-color:green;">=> React 개발할때 나오던 의존성 err가 혹시 이건가 ;; => 생각 및 질문하기</mark>
 
@@ -118,4 +119,4 @@ TS를 잘 쓰면 직접 관리하는 상태의 수를 줄여줄 수 있다.
 
 \=> 그런데 개발하다보면 변경사항이 생길 수 밖에 없음.
 
-\=> 그럴때는 하위 컴포넌트에서 상위 컴포넌트로 올려주면서 (lifting state up) 위치를 잡는 것도 좋아 보임.
+\=> 그럴때는 하위 컴포넌트에서 상위 컴포넌트로 올려주면서 (lifting state up) 위치를 잡는 것도 한 방법.
