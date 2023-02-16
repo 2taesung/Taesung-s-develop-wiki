@@ -1,8 +1,16 @@
 # SRP 수단
 
-### Extract Function
+React로 개발을 할때, 컴포넌트, 함수 등등을 분리하는 <mark style="background-color:red;">기준</mark> 이 굉장히 어렵고 잘 모른다.(정답이 없음) 그렇기 때문에 몇가지 객관적인 기준들(단서들)을 가지고 접근할 필요성이 있다고 생각. 그리고 이것을 시작으로 진화시켜 논리적으로 고민해보면서 핵심을 찾고 결국 결정을 내릴 수 있다고 생각됨.
 
-[Extract Function](https://refactoring.com/catalog/extractFunction.html)
+
+
+추가로 또 든 생각은 결국 이 문제는 정답은 없는 문제. 아키텍쳐, 상황판단 능력, 확장성, 복잡성, 개발인력, 개발기한 등등 이러한 모든 변수들에서 적절한 판단을 내릴 수 있어야할듯. 왜 그렇게 했는지 왜 이게 최적인지 남을 설득할 수 있어야함.
+
+### Extract Function vs Inline Function
+
+> [Extract Function](https://refactoring.com/catalog/extractFunction.html)
+>
+> [Inline Function](https://refactoring.com/catalog/inlineFunction.html)
 
 ```javascript
 function printOwing(invoice) {

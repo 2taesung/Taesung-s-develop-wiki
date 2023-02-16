@@ -12,6 +12,6 @@
   * [JSX](week-2/jsx/README.md)
     * [JSX -> JS 변환 실습 코드들](week-2/jsx/jsx-greater-than-js.md)
 * [Week 3](week-3/README.md)
-  * [data](week-3/data.md)
+  * [data](week-3/page-1.md)
   * [React](week-3/react.md)
   * [SRP 수단](week-3/srp.md)
