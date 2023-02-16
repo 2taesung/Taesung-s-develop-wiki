@@ -14,3 +14,4 @@
 * [Week 3](week-3/README.md)
   * [데이터](week-3/page-1.md)
   * [React](week-3/react.md)
+  * [SRP 수단](week-3/srp.md)
