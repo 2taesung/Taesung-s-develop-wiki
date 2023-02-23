@@ -37,8 +37,31 @@
 
 대표적인 Hooks
 
+\=> Hooks는 React를 이루는 도구일 뿐이다.
+
 * useState → State Hook ⇒ React의 State
 * useEffect ⇒ Side-effect
 * useContext
 * useRef
 * useLayoutEffect → useEffect와 조금 다름.
+
+
+
+### Hook 규칙
+
+> [Hook의 규칙](https://ko.reactjs.org/docs/hooks-rules.html)
+
+Hook 호출은 규칙이 있어서 단순하게 쓰도록 노력해야 한다.
+
+1. Function Component 바로 안쪽(함수의 최상위)에서만 호출.
+2. Function Component 또는 Custom Hook에서만 호출.
+
+처음에는 콜백 함수나 조건문 안에서 Hook을 호출하는 실수를 저지르기 쉽다.
+
+```jsx
+if (playing) {
+	const products = useFetchProducts();
+	console.log(products);
+}
+```
+
