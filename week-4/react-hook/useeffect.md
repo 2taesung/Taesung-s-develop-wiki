@@ -4,7 +4,9 @@
 
 > Some components need to synchronize with external systems.
 
-synchronize라 함은 컴포넌트 외부에서 영향을 받는 것을 뜻 해.
+synchronize라 함은 컴포넌트 외부와 동기시킨다.&#x20;
+
+즉, 컴포넌트 외부에서 영향을 받는 것을 뜻 함.
 
 예를 들면 props의 변화, axios를 통해 외부에서 들어오는 데이터.
 
@@ -49,6 +51,16 @@ useEffect(() => {
 \=> 물론, return (clean up)도 제대로 하지 않았고.
 
 \=> 그러니 말 그대로 side Effect rendering들이 다수 발생할 수 밖에 없었지...
+
+
+
+### Clean up(return)
+
+> return 을 통해 계속해서 실행되는 useEffect를 끝내줄 수 있다.
+
+\=> 나는 사실 이걸 하지 않고 계속해서 \[] trriger 조건들을 부여했지..
+
+\=> 그러니 점점 useEffect의 실행이 많아지고 이를 통해 state를 건드려 의도치 않은 rendering들로rendering 비효율을 유도하게 됨.
 
 
 
