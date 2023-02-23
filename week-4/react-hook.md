@@ -65,3 +65,12 @@ if (playing) {
 }
 ```
 
+### usehooks-ts
+
+> [usehooks-ts](https://usehooks-ts.com/)
+
+모든 Hook에 대한 코드가 웹 사이트에 직접 노출됨.
+
+\=> 이걸 바탕으로 내 custom hook 만드는데 레퍼런스가 될 수 있음.
+
+\=> 그냥 써도 훌륭. useLocalstorage 같은거는 또 활용하면 좋을듯&#x20;
