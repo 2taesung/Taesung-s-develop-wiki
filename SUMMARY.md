@@ -19,4 +19,5 @@
   * [State](week-3/state.md)
 * [Week 4](week-4/README.md)
   * [Express](week-4/express.md)
-  * [React의 Hook](week-4/react-hook.md)
+  * [React의 Hook](week-4/react-hook/README.md)
+    * [useEffect](week-4/react-hook/useeffect.md)

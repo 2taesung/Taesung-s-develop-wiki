@@ -19,16 +19,19 @@
 
 \=> 디자인 패턴 중에서도 해당 내용이 있음. 그러나 요즘엔 이런 디자인 패턴은 사용하지 않음.
 
-[presentational & container 디자인 패턴](https://kyounghwan01.github.io/blog/React/container-presenter-dessign-pattern/)
+[presentational & container 디자인 패턴](https://kyounghwan01.github.io/blog/React/container-presenter-dessign-pattern/)\
 
-> \
->
 
 현재:
 
 * 그냥 Function Component만 사용.
-* 상태 관리 유무를 바로 알기 어려움 = 신경쓰지 않아도 됨.
+* 상태 관리 유무를 바로 알기 어려움 = 신경쓰지 않아도 됨.&#x20;
+
+&#x20;    (예전에는 class 를 쓰면 상태관리를 한다라는 거였다)
+
 * 복잡한 요소는 전부 Hook으로 격리 및 재사용 가능.
+
+&#x20;    (useCustom으로 복잡한 로직의 격리 및 재사용이 가능해짐)
 
 
 
@@ -39,12 +42,3 @@
 * useContext
 * useRef
 * useLayoutEffect → useEffect와 조금 다름.
-
-
-
-### useEffect
-
-외부와 sync 할 경우 쓴다.
-
-
-
