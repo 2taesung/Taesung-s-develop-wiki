@@ -68,6 +68,8 @@ useEffect(() => {
 
 가장 대표적으로 API를 호출해서 데이터를 얻어올 때 사용
 
+(외부에서 영향을 받는 것)
+
 ```typescript
 const [products, setProducts] = useState<Product[]>([]);
 
@@ -85,13 +87,21 @@ useEffect(() => {
 
 Fetch 함수의 위치가 고민된다면, Dan Abramov의 글을 다시 보자.
 
+\=> 이건 뭐냐면 fetchProducts라는 함수를 전역 변수로 만들어서 사용할 때만 useEffect 안에 실행하면 되지 않나? 맞긴 함 근데 해당 함수가 여러가지 다른 변수들에게 영향을 받을 경우에는 블록 안에 자기의 영역을 구축하고 있어야 코드가 꼬이지 않음. 그래서 안에 쓰는걸 Dan이 추천 하는 바임.
+
 * [useEffect 완벽가이드 - 함수를 이펙트 안으로 옮기기](https://overreacted.io/ko/a-complete-guide-to-useeffect/#%ED%95%A8%EC%88%98%EB%A5%BC-%EC%9D%B4%ED%8E%99%ED%8A%B8-%EC%95%88%EC%9C%BC%EB%A1%9C-%EC%98%AE%EA%B8%B0%EA%B8%B0)
 
 
 
+#### 의존성 배열을 이용해 Fetch할 때 주의사항
 
+* [Fetching data](https://beta.reactjs.org/learn/synchronizing-with-effects#fetching-data)
 
+\=> useEffect를 사용할때는 의존성 배열을 설정하는 것을 조심하고 신중하게 해야함.
 
+\=> 잘못 설정하면 내가 원치 않은 타이밍에 useEffect를 실행시킬 수 가 있음
+
+\=> 그러므로 불가피하게 의존성 배열에 데이터가 추가 되었더라도 안에 타입가드 처럼 하나의 if 문으로 조건을 추가하면 해당 함수를 실행 시키지 않는 방법을 사용할 수 있음.&#x20;
 
 
 
