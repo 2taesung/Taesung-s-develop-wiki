@@ -27,6 +27,27 @@ useState로 대표되는 state 역시 React로 개발을 하는데 SRP와 양대
 
 그냥 변수 선언해서 가져다가 쓰면 됨.
 
+{% hint style="info" %}
+여기서 그냥 변수는 그러면 언제 쓰면 되는가?
+
+변하지 않고 state 상태값에서 부가적으로 생성되는 데이터들은 변수를 그냥 써서 유기적으로 state가 변경되면서 렌더링 한번으로 다같이 바꿔주는게 현명하고 중복 rendering이 발생하지 않는다.&#x20;
+
+
+
+만약 state에서 파생되는 데이터를 또 state로 만들게 되면 연쇄적으로 렌더링이 수차례 반복하면서 점점 복잡하고 비효율적인 앱이 되어간다.
+
+```javascript
+
+const filters = filterText + filterCategory;
+
+return (
+  <p>
+    <h1>{filters}</h1>
+  ...
+)
+```
+{% endhint %}
+
 
 
 그런데 state 로 우리는 <mark style="background-color:red;">비즈니스 로직(핵심 데이터)가 변경되면 다같이 유기적으로 변경되는 아름다운 구조</mark>를 만드는게 목표.&#x20;
