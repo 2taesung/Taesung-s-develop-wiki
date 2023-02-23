@@ -17,6 +17,7 @@
   * [React](week-3/react.md)
   * [컴포넌트,함수 분리(분해)](week-3/undefined-1.md)
   * [State](week-3/state.md)
+  * [React가 두 번 실행되는 문제](week-3/react-1.md)
 * [Week 4](week-4/README.md)
   * [Express](week-4/express.md)
   * [React의 Hook](week-4/react-hook.md)

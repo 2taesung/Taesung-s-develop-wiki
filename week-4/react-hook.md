@@ -37,8 +37,6 @@
 
 대표적인 Hooks
 
-\=> Hooks는 React를 이루는 도구일 뿐이다.
-
 * useState → State Hook ⇒ React의 State
 * useEffect ⇒ Side-effect
 * useContext
