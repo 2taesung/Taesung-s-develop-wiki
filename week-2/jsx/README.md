@@ -56,7 +56,7 @@ React.createElement("p", null, "Hello, world!");
 
 여기에 추가로 요새 JSX
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 위에서 알아봤던 React.createElement 함수의 인자 세번째 자리(자식컴포넌트)에 아무것도 들어가지 않았다.
 
@@ -66,7 +66,7 @@ React.createElement("p", null, "Hello, world!");
 
 
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>
 
 \=> 위 내용을 보면 \<p> 태그의 변환 부분에 보면 "Count: ", count, "!" 를 볼 수 있다.&#x20;
 

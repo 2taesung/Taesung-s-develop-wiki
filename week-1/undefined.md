@@ -108,7 +108,7 @@ node_modules //아몰랑 이 이름 다.
 
 <mark style="background-color:orange;">npm의 버전에대한 이야기는 없네 => 강의 듣고 내용 없으면 질문</mark>
 
-![](<../.gitbook/assets/image (2) (1).png>)
+![](<../.gitbook/assets/image (2) (1) (1).png>)
 
 ```
 {
