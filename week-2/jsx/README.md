@@ -285,7 +285,7 @@ React Virtual DOM 보다 효율적인 방식은 당연히 있을 수 있다.&#x2
     → [Strict Mode](https://ko.reactjs.org/docs/strict-mode.html)를 쓰지 않으면 경고함.
 * profiler는 성능 향상 할때 주로 사용
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (11).png>)
 {% endhint %}
 
 

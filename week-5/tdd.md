@@ -86,7 +86,7 @@ TDD를 하는 목표는 clean code that works  '제대로 돌아가는 클린코
 
 예를들어,
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
 
 다음과 같이 막무가내로 짜놓고.
 

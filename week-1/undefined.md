@@ -460,7 +460,7 @@ export function createRoot(container: Element | DocumentFragment, options?: Root
 
 아무튼 위의 과정을 거치면 됨 아래는 리액트 최초 적용
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 element null인 경우를 방어.
 

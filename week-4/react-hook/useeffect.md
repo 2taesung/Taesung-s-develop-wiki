@@ -40,7 +40,7 @@ useEffect(() => {
 
 \=> 렌더링 시 항상 작동. state가 바뀔때도 실행이 됨으로&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 \=> 위의 검색의 내용을 바꾸더라도(state 변경) 제목의 값이 변경된다.
 
