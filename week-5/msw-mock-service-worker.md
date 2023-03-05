@@ -32,6 +32,136 @@ MSW의 SW가 서비스 워커다.
 
 
 
+MSW 패키지 설치
+
+```bash
+npm i -D msw
+```
+
+`jest.config.js` 파일의 “setupFilesAfterEnv” 속성에 `setupTests.ts` 파일 추가.
+
+```jsx
+module.exports = {
+	testEnvironment: 'jsdom',
+	**setupFilesAfterEnv**: [
+		'@testing-library/jest-dom/extend-expect',
+		'**<rootDir>/src/setupTests.ts**',
+	],
+	transform: {
+		'^.+\\\\.(t|j)sx?$': ['@swc/jest', {
+			jsc: {
+				parser: {
+					syntax: 'typescript',
+					jsx: true,
+					decorators: true,
+				},
+				transform: {
+					react: {
+						runtime: 'automatic',
+					},
+				},
+			},
+		}],
+	},
+};
+```
+
+`src/setupTests.ts` 파일
+
+```jsx
+import server from './mocks/server';
+
+beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
+
+afterAll(() => server.close());
+
+afterEach(() => server.resetHandlers());
+```
+
+`src/mocks/server.ts` 파일
+
+```jsx
+// msw 가 -D 로 dev 상태일 때만 존재하게 만들어놔서 떡 하니 있으면 lint를 뿜기도 함(난 안뿜기는함)
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { setupServer } from 'msw/node';
+
+import handlers from './handlers';
+
+const server = setupServer(...handlers);
+
+export default server;
+```
+
+`src/mocks/handlers.ts` 파일
+
+→ Express의 경험을 살려보자!
+
+```jsx
+import { rest } from 'msw';
+
+const BASE_URL = '<http://localhost:3000>';
+
+const handlers = [
+	rest.get(`${BASE_URL}/products`, (req, res, ctx) => {
+		const { products } = fixtures;
+
+		return res(
+			ctx.status(200),
+			ctx.json({ products }),
+			);
+		}),
+	];
+
+export default handlers;
+```
+
+
+
+\`App.text.tsx\`
+
+````typescript
+import { render, screen, waitFor } from '@testing-library/react';
+
+import App from './App';
+
+test('App', async () => {
+	render(<App />);
+	
+	await waitFor(() => {
+		screen.getByText('메가반점');
+	});
+});
+```
+````
+
+
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+\=> node 에는 fetch가 없다.
+
+\=> msw 로 fetch 까지 구현을 해버리니 이제는 문제가 생기는것.
+
+
+
+setupTests.ts
+
+```typescript
+import 'whatwg-fetch';
+
+import server from './mocks/server';
+
+beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
+
+afterAll(() => server.close());
+
+afterEach(() => server.resetHandlers());
+```
+
+```
+import 'whatwg-fetch';  추가
+```
+
 <mark style="background-color:orange;"></mark>
 
 <mark style="background-color:orange;">=> 근데 솔직히 내용을 보면 거의 express 수준의 코드 작업이 필요..</mark>

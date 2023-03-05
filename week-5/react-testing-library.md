@@ -199,7 +199,7 @@ const useFetchRestaurants = jest.fn(() => fixtures.restaurants)
 export default useFetchRestaurants;
 ```
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
 
 \=> 그래도 여전히 불편한거 다름 없다 ...
 
