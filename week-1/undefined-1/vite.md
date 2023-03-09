@@ -25,3 +25,17 @@ export default defineConfig({
 
 
 
+vercel을 vite로 빌딩한 파일을 올리면 / 가 아닌 다른 주소로 들어가거나 새로고침하면 버그가 발생하는 문제가 있었음
+
+
+
+package.json과 같은 위치에 vercel.json 생성
+
+vercel.json
+
+```javascript
+{
+  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
+}
+```
+
