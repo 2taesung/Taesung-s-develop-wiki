@@ -32,3 +32,13 @@ function useFetchProducts() {
 
 
 \=> 일급객체이기 때문에 return으로 setProducts를 또 해줄수도 있음 참고.
+
+
+
+### return 문을 가능하면 useState와 형식을 일관되게 가면 좋다
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+\=> 왜 이렇게 순서를 바꾸느냐 ?
+
+setState를 보면 데이터, set함수(기타등등) 이기에&#x20;

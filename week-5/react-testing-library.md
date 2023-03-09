@@ -158,7 +158,7 @@ describe('App ', () => {
 
 ### fixture 로 데이터 응집
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (3).png>)
 
 fixtures/restaurants.ts
 
@@ -234,7 +234,7 @@ export default useFetchRestaurants;
 * <mark style="background-color:orange;">어디까지 테스트를 해야할지 시나리오를 짜는 범위에 대한 기준이 없으면 한도 끝도 없이 test 코드가 나올듯...</mark>
 * <mark style="background-color:orange;">테스트 코드 짜는 부담 -> 테스트 시나리오에 대한 기획을 해야하는셈이 되는거 아닌가... (업무부담)</mark>
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
