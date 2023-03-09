@@ -1,6 +1,10 @@
 # 번들러(빌드)
 
-번들러의 핵심 목적은&#x20;
+번들러는 브라우저에서 ESM(ES Modules)을 지원하기 전, JS 모듈화를 Native 레벨에서 진행할 수 없었음. 따라서 "번들링(Bundling)"이라는 우회적인 방법을 사용.
+
+
+
+그래서번들러의 핵심 목적은&#x20;
 
 * ts, jsx, tsx 등 -> JS로 트랜스파일링
 * 플러그인 추가
@@ -10,7 +14,7 @@
 
 \=> Webpack의 문제점을 인식해 다른 애들이 나옴
 
-\=> 그러나 장단점들이 있어 적절한 상황에 적용이 결론.
+\=>  각각의 장단점들이 있어 적절한 상황에 적용이 베스트결론.
 
 
 
@@ -27,7 +31,7 @@
 * Golang -> [esbuild](https://esbuild.github.io/) (안정성 높음)
 * Rust -> [SWC](https://github.com/swc-project/swc)
 
-여기에이들을 이용해 Node.js로 한단계 래핑하여 속도를 개선
+여기에이들을 이용해 Node.js로 한단계 래핑 및 활용하여 속도를 개선
 
 * esbuild -> Vite, Snowpack
 
