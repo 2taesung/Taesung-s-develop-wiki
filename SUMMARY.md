@@ -32,3 +32,5 @@
   * [React Testing Library](week-5/react-testing-library.md)
   * [MSW (Mock Service Worker)](week-5/msw-mock-service-worker.md)
   * [Playwright](week-5/playwright.md)
+* [Week 6](week-6/README.md)
+  * [관심사의 분리(SoC)](week-6/soc.md)
