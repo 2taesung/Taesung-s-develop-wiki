@@ -34,3 +34,4 @@
   * [Playwright](week-5/playwright.md)
 * [Week 6](week-6/README.md)
   * [관심사의 분리(SoC)](week-6/soc.md)
+  * [Flux Architecture](week-6/flux-architecture.md)

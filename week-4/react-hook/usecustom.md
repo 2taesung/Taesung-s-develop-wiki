@@ -37,7 +37,7 @@ function useFetchProducts() {
 
 ### return 문을 가능하면 useState와 형식을 일관되게 가면 좋다
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 \=> 왜 이렇게 순서를 바꾸느냐 ?
 

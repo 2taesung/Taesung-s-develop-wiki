@@ -211,7 +211,7 @@ export default useFetchRestaurants;
 
 * <mark style="background-color:green;">E2E 테스트와의 차이가 거의 없다고 느껴지기도 함... (실제로 과제 테스트에 쓰인 e2e cypress랑 차이가 없는듯...)</mark>
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
