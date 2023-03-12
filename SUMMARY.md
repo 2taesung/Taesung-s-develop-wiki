@@ -38,3 +38,4 @@
   * [External Store](week-6/external-store/README.md)
     * [TSyringe](week-6/external-store/tsyringe.md)
     * [Redux](week-6/external-store/redux.md)
+    * [useStore-ts](week-6/external-store/usestore-ts.md)
