@@ -35,3 +35,6 @@
 * [Week 6](week-6/README.md)
   * [관심사의 분리(SoC)](week-6/soc.md)
   * [Flux Architecture](week-6/flux-architecture.md)
+  * [External Store](week-6/external-store/README.md)
+    * [TSyringe](week-6/external-store/tsyringe.md)
+    * [Redux](week-6/external-store/redux.md)
